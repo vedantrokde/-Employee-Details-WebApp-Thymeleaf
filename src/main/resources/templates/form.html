@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Employee Details Form</title>
+		<link rel="stylesheet" th:href="@{/css/style.css}" />
+		<style>
+			table {
+				width: 100%;
+			}
+			.first {
+				text-align: right;
+				padding-right: 5px;
+			}
+			.link {
+				text-decoration: none;
+				font-size: 0.8em;
+				border-right: 1px solid black;
+				padding-right: 5px;
+			}
+			tr:nth-child(even) {
+				background-color: #fff;
+			}
+		</style>
+	</head>
+	<body>
+		<main>
+			<h2>Customer Relation Manager</h2>
+			<hr style="margin-bottom: 40px" />
+
+			<h3 style="text-decoration: underline">Customer Form</h3>
+			<div style="width: 450; margin: auto">
+				<form
+					action="#"
+					th:action="@{/employees/save}"
+					th:object="${employee}"
+					method="POST"
+				>
+					<input type="hidden" name="id" th:field="*{id}" />
+					<table>
+						<tbody>
+							<tr>
+								<td class="first">
+									<label>First Name:</label>
+								</td>
+								<td>
+									<input
+										type="text"
+										th:field="*{firstName}"
+									/>
+								</td>
+							</tr>
+							<tr>
+								<td class="first">
+									<label> Last Name: </label>
+								</td>
+								<td>
+									<input
+										type="text"
+										th:field="*{lastName}"
+									/>
+								</td>
+							</tr>
+							<tr>
+								<td class="first">
+									<label>Email:</label>
+								</td>
+								<td>
+									<input
+										type="text"
+										th:field="*{email}"
+									/>
+								</td>
+							</tr>
+							<tr>
+								<td class="first">
+									<a
+										class="link"
+										th:href="@{/employees}"
+										>Back to Homepage
+									</a>
+								</td>
+								<td>
+									<input
+										type="submit"
+										value="Save"
+									/>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</form>
+			</div>
+			<hr style="margin-top: 40px" />
+		</main>
+	</body>
+</html>

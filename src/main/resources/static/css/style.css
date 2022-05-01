@@ -1,0 +1,53 @@
+* {
+	box-sizing: border-box;
+}
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+body {
+	background: rgb(162, 247, 162);
+}
+main {
+	width: 600px;
+	margin: auto;
+	background: #fff;
+	padding: 50px;
+	height: 100vh;
+}
+h2,
+h3 {
+	text-align: center;
+}
+table {
+	width: 100%;
+}
+thead {
+	height: 30px;
+	background: #02bd78;
+	color: #fff;
+	font-weight: 300;
+}
+td,
+th {
+	padding: 5px;
+}
+tr:nth-child(even) {
+	background-color: #f2f2f2;
+}
+#links {
+	text-align: center;
+}
+a {
+	text-decoration: none;
+}
+.btn {
+	background: #ececec;
+	padding: 2px;
+	border-radius: 5px;
+	border: 1px solid #ccc;
+}
+.btn:active {
+	box-shadow: 1px 1px 5px grey;
+}
